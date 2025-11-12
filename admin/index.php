@@ -6,6 +6,8 @@ $pages = [
   'inici'      => ['title' => 'Inici',      'file' => __DIR__ . '/pages/inici.php'],
   'benvinguda' => ['title' => 'Benvinguda', 'file' => __DIR__ . '/pages/benvinguda.php'],
   'secretaria' => ['title' => 'Secretaria', 'file' => __DIR__ . '/pages/secretaria.php'],
+  'creacio_cursos' => ['title' => 'Creació de cursos', 'file' => __DIR__ . '/pages/creacio_cursos.php'],
+
 ];
 
 $slug = isset($_GET['p']) ? strtolower(trim($_GET['p'])) : 'inici';
