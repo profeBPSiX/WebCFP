@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+<<<<<<< HEAD
 if (!isset($_SESSION['admin'])) {
     header("Location: login.php");
     exit();
@@ -20,3 +21,10 @@ if (!isset($_SESSION['admin'])) {
     <a href="logout.php">Tancar sessió</a>
 </body>
 </html>
+=======
+<article class="card">
+  <h1>Benvinguda</h1>
+  <p>Benvinguts al Centre de Formació Professional. Aquesta és una altra pàgina de mostra! Totes les pàgines es crearan a /pages. Però d'on obtindrem el contingut?</p>
+  
+</article>
+>>>>>>> ef2596ab015567b889cd7839829c2ed5c7689a9d
