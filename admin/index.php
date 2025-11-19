@@ -21,10 +21,8 @@ $current = $pages[$slug] ?? null;
   <title><?= e(($current['title'] ?? '404') . ' — Centre de Formació Professional') ?></title>
   <link rel="stylesheet" href="<?= asset('assets/css/app.css') ?>">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-<<<<<<< HEAD
-=======
   <link href="cdn.datatables.net/2.3.4/css/dataTables.dataTables.min.css">
->>>>>>> ef2596ab015567b889cd7839829c2ed5c7689a9d
+
 </head>
 <body>
   <?php include __DIR__ . '/inc/header.php'; ?>
@@ -34,11 +32,6 @@ $current = $pages[$slug] ?? null;
         include $current['file'];
       } else { ?>
       <section class="card">
-<<<<<<< HEAD
-        <h1>Pasa de esta pagina</h1>
-        <p>La pàgina que has sol·licitat no existeix.</p>
-        <p><a class="btn" href="<?= url('login') ?>">Tornar a enrrere</a></p>
-=======
         <h1>Cursos del Centre de Formació Professional</h1>
         <p>Aquí trobarás tots els cursos del centre</p>
         <table id="taulaCursos" class="display">
@@ -62,16 +55,12 @@ $current = $pages[$slug] ?? null;
     </tbody>
 </table>
         <p><a class="btn btn-primary" href="<?= url('inici') ?>">Torna a l'inici</a></p>
->>>>>>> ef2596ab015567b889cd7839829c2ed5c7689a9d
       </section>
     <?php } ?>
   </main>
   <?php include __DIR__ . '/inc/footer.php'; ?>
   <script src="<?= asset('assets/js/app.js') ?>"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-<<<<<<< HEAD
-=======
-  <script src="https://cdn.datatables.net/2.3.4/js/dataTables.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>"></script>
->>>>>>> ef2596ab015567b889cd7839829c2ed5c7689a9d
+  <script src="https://cdn.datatables.net/2.3.4/js/dataTables.min.js" crossorigin="anonymous"></script>"></script>
 </body>
 </html>
