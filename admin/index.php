@@ -33,33 +33,14 @@ $current = $pages[$slug] ?? null;
       <section class="card">
         <h1>Cursos del Centre de Formació Professional</h1>
         <p>Aquí trobarás tots els cursos del centre</p>
-        <table id="taulaCursos" class="display">
-    <thead>
-        <tr>
-            <th>Column 1</th>
-            <th>Column 2</th>
-            <th>Column 3</th>
-            <th>Column 4</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-        </tr>
-        <tr>
-            <td>Row 2 Data 1</td>
-            <td>Row 2 Data 2</td>
-        </tr>
-    </tbody>
-</table>
         <p><a class="btn btn-primary" href="<?= url('inici') ?>">Torna a l'inici</a></p>
       </section>
     <?php } ?>
   </main>
   <?php include __DIR__ . '/inc/footer.php'; ?>
-  <script src="<?= asset('assets/js/app.js') ?>"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  <script src="https://cdn.datatables.net/2.3.4/js/dataTables.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.datatables.net/2.3.4/js/dataTables.min.js" crossorigin="anonymous"></script>"></script>
+  <script src="<?= asset('assets/js/app.js') ?>"></script>
 </body>
 </html>

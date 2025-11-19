@@ -5,3 +5,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 });
 console.log('hola');
 let taula = new DataTable('#taulaCursos');
+
+$(document).ready( function () {
+    $('#taulaCursos').DataTable();
+} );
