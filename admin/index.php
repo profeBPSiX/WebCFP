@@ -3,7 +3,7 @@
 require __DIR__ . '/inc/functions.php';
 
 $pages = [
-  'inici'      => ['title' => 'Inici',      'file' => __DIR__ . '/pages/inici.php'],
+  'login'      => ['title' => 'login',      'file' => __DIR__ . '/pages/login.php'],
   'benvinguda' => ['title' => 'Benvinguda', 'file' => __DIR__ . '/pages/benvinguda.php'],
   'secretaria' => ['title' => 'Secretaria', 'file' => __DIR__ . '/pages/secretaria.php'],
 ];
@@ -18,6 +18,7 @@ $current = $pages[$slug] ?? null;
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?= e(($current['title'] ?? '404') . ' — Centre de Formació Professional') ?></title>
   <link rel="stylesheet" href="<?= asset('assets/css/app.css') ?>">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
   <?php include __DIR__ . '/inc/header.php'; ?>
@@ -27,13 +28,14 @@ $current = $pages[$slug] ?? null;
         include $current['file'];
       } else { ?>
       <section class="card">
-        <h1>404 — Pàgina no trobada</h1>
+        <h1>Pasa de esta pagina</h1>
         <p>La pàgina que has sol·licitat no existeix.</p>
-        <p><a class="btn" href="<?= url('inici') ?>">Torna a l'inici</a></p>
+        <p><a class="btn" href="<?= url('login') ?>">Tornar a enrrere</a></p>
       </section>
     <?php } ?>
   </main>
   <?php include __DIR__ . '/inc/footer.php'; ?>
   <script src="<?= asset('assets/js/app.js') ?>"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
