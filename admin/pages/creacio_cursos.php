@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['admin'])) {
+    header("Location: ?p=login");
+    exit();
+}
+?>
+
 <section class="card">
   <h1>Creació de cursos</h1>
   <p>Aquesta és la pàgina d'<strong>inici</strong>.</p>

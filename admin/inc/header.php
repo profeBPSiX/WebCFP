@@ -6,6 +6,8 @@
       <a href="<?= url('benvinguda') ?>">Benvinguda</a>
       <a href="<?= url('secretaria') ?>">Secretaria</a>
       <a href="<?= url('creacio_cursos') ?>">Creació de cursos</a>
+      <a href="<?= url('logout') ?>">Tancar sesion</a>
+     
     </nav>
   </div>
 </header>

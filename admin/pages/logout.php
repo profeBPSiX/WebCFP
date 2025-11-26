@@ -1,6 +1,6 @@
 <?php
-session_start();        // Inicia la sesión existente
-session_unset();        // Borra todas las variables de sesión
-session_destroy();      // Destruye la sesión
-header("Location: login.php"); // Redirige al login
+session_start();        
+session_unset();        
+session_destroy();      
+header("Location: ?p=login"); 
 exit();

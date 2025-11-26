@@ -17,7 +17,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
 if (isset($_GET['logout'])) {
     session_destroy();
-    header("Location: login.php");
+    header("Location: ?p=login");
     exit();
 }
 
@@ -68,7 +68,7 @@ if (!isset($_SESSION['admin'])):
     </style>
 </head>
 <body>
-    <form method="POST" action="login.php">
+    <form method="POST" action="?p=login">
         <h2>Inici de sessió</h2>
         <input type="text" name="username" placeholder="Usuari" required><br>
         <input type="password" name="password" placeholder="Contrasenya" required><br>
