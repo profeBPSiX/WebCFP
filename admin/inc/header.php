@@ -1,4 +1,3 @@
-
 <header>
   <div class="container">
     <strong>Centre de Formació</strong>
