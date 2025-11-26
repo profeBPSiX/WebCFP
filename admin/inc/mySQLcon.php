@@ -1,5 +1,5 @@
 <?php
-$host = 'localhost';
+/*$host = 'localhost';
 $usuari = 'root';
 $password = '';
 $db = 'cfp';
@@ -8,4 +8,4 @@ if ($conexion->connect_error){
     die("ERROR DE CONNEXIÓ: ". $conexion->connect_error);
 }
 echo'Connexió exitosa';
-?>
+*/?>

@@ -3,59 +3,60 @@
   <p>Aquesta és la pàgina d'<strong>inici</strong>.</p>
   <table id="taulaCursos" class="display">
     <thead>
-        <tr>
-            <th rowspan="2">Column 1</th>
-            <th rowspan="2">Column 2</th>
-            <th rowspan="2">Column 3</th>
-            <th rowspan="2">Column 4</th>
-        </tr>
+      <tr>
+        <th>Column 1</th>
+        <th>Column 2</th>
+        <th>Column 3</th>
+        <th>Column 4</th>
+      </tr>
     </thead>
     <tbody>
-        <tr>
-            <td rowspan="2">Row 1 Data 1</td>
-            <td rowspan="2">Row 1 Data 2</td>
-        </tr>
-        <tr>
-            <td rowspan="2">Row 2 Data 1</td>
-            <td rowspan="2">Row 2 Data 2</td>
-        </tr>
+      <tr>
+        <td>TSDP (Tècnic en Suport i Desenvolupament de Programari)</td>
+        <td>TSSIX (Tècnic en Suport de Sistemes i Xarxes)</td>
+        <td>TSGA (Tècnic en Suport a la Gestió Administrativa)</td>
+        <td>TSOCO (TECNIC)</td>
+      </tr>
+      <tr>
+        <td>Row 2 Data 1</td>
+        <td>Row 2 Data 2</td>
+        <td>Row 1 Data 1</td>
+        <td>Row 1 Data 2</td>
+      </tr>
     </tbody>
-</table>
-  <ul>
-    <li><a class="btn" href="<?= url('benvingua') ?>">(demo) Enllaç trencat per veure 404</a></li>
-  </ul>
+  </table>
 </section>
-    <h1>Creació de cursos</h1>
-    <p>Aquesta és la pàgina per a crear cursos.</p>
-    <form method="post">
-        <div class="mb-3">
-            <label for="nom" class="form-label">Nom del curs</label>
-            <input type="text" class="form-control" id="nom" name="nom" required>
-        </div>
+<h1>Creació de cursos</h1>
+<p>Aquesta és la pàgina per a crear cursos.</p>
+<form method="post">
+  <div class="mb-3">
+    <label for="nom" class="form-label">Nom del curs</label>
+    <input type="text" class="form-control" id="nom" name="nom" required>
+  </div>
 
-        <div class="mb-3">
-            <label for="desc" class="form-label">Descripció</label>
-            <textarea class="form-control" id="desc" name="desc" rows="3" required></textarea>
-        </div>
+  <div class="mb-3">
+    <label for="desc" class="form-label">Descripció</label>
+    <textarea class="form-control" id="desc" name="desc" rows="3" required></textarea>
+  </div>
 
-        <div class="mb-3">
-            <label for="type" class="form-label">Tipus de curs</label>
-            <select class="form-select" id="type" name="type" required>
-                <option value="">Seleccioni una opció</option>
-                <option value="bp">BP</option>
-                <option value="dpi">DPI</option>
-            </select>
-        </div>
-        <!-- sortides laborals i competencies -->
-        <div class="form-check mb-4">
-            <input class="form-check-input" type="checkbox" id="disponible" name="disponible" value="1">
-            <label class="form-check-label" for="disponible">
-                Disponible
-            </label>
-        </div>
+  <div class="mb-3">
+    <label for="type" class="form-label">Tipus de curs</label>
+    <select class="form-select" id="type" name="type" required>
+      <option value="">Seleccioni una opció</option>
+      <option value="bp">BP</option>
+      <option value="dpi">DPI</option>
+    </select>
+  </div>
+  <!-- sortides laborals i competencies -->
+  <div class="form-check mb-4">
+    <input class="form-check-input" type="checkbox" id="disponible" name="disponible" value="1">
+    <label class="form-check-label" for="disponible">
+      Disponible
+    </label>
+  </div>
 
-        <button type="submit" name="submit" class="btn btn-primary w-100">Crear</button>
-    </form>
+  <button type="submit" name="submit" class="btn btn-primary w-100">Crear</button>
+</form>
 
 </section>
 <?php
@@ -68,21 +69,21 @@
 require_once './inc/mySQLcon.php';
 
 if (isset($_POST['submit'])) {
-    $nom = $_POST['nom'];
-    $tipus = $_POST['type'];
-    $descripcio = $_POST['desc'];
-    $disponible = isset($_POST['disponible']) ? 1 : 0;
+  $nom = $_POST['nom'];
+  $tipus = $_POST['type'];
+  $descripcio = $_POST['desc'];
+  $disponible = isset($_POST['disponible']) ? 1 : 0;
 
-    $stmt = $conexion->prepare("INSERT INTO cursos (nom, tipus, descripcio, disponible) VALUES (?, ?, ?, ?)");
-    $stmt->bind_param("sssi", $nom, $tipus, $descripcio, $disponible);
+  $stmt = $conexion->prepare("INSERT INTO cursos (nom, tipus, descripcio, disponible) VALUES (?, ?, ?, ?)");
+  $stmt->bind_param("sssi", $nom, $tipus, $descripcio, $disponible);
 
-    if ($stmt->execute()) {
-        echo "<div class='alert alert-success'>Curs creat correctament!</div>";
-    } else {
-        echo "<div class='alert alert-danger'>Error: " . $stmt->error . "</div>";
-    }
+  if ($stmt->execute()) {
+    echo "<div class='alert alert-success'>Curs creat correctament!</div>";
+  } else {
+    echo "<div class='alert alert-danger'>Error: " . $stmt->error . "</div>";
+  }
 
-    $stmt->close();
-    $conexion->close();
+  $stmt->close();
+  $conexion->close();
 }
 ?>
