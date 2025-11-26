@@ -4,6 +4,7 @@ require __DIR__ . '/inc/functions.php';
 
 $pages = [
   'login'      => ['title' => 'login',      'file' => __DIR__ . '/pages/login.php'],
+  'logout'      => ['title' => 'logout',      'file' => __DIR__ . '/pages/logout.php'],
   'benvinguda' => ['title' => 'Benvinguda', 'file' => __DIR__ . '/pages/benvinguda.php'],
   'secretaria' => ['title' => 'Secretaria', 'file' => __DIR__ . '/pages/secretaria.php'],
   'creacio_cursos' => ['title' => 'Creació de cursos', 'file' => __DIR__ . '/pages/creacio_cursos.php'],
